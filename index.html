@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>還房貸 vs 存房貸 - 財務規劃試算</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#C5A065',
+                            dark: '#1A202C',
+                            light: '#F7FAFC',
+                            blue: '#2C5282'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2C5282, #1A202C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .highlight-box {
+            border-left: 5px solid #C5A065;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <header class="bg-white py-8 shadow-sm">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-black text-brand-blue mb-2">還房貸 <span class="text-brand-gold">vs</span> 存房貸</h1>
+            <p class="text-xl md:text-2xl text-gray-600 font-bold mt-4">同樣擁有 500 萬現金與房貸，<br class="md:hidden">結局卻大不相同！</p>
+        </div>
+    </header>
+
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 text-center max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-brand-blue mb-4"><i class="fas fa-user-circle mr-2"></i>客戶現況</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 text-xl font-bold">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-3">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span>房貸餘額：500萬</span>
+                </div>
+                <div class="hidden md:block text-gray-400">|</div>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-3">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <span>手邊現金：500萬</span>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500">(房貸條件：利率 2.4%，30年期)</p>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-4 mb-12">
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <div class="bg-white rounded-3xl p-8 card-shadow border border-gray-100 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gray-400"></div>
+                <h3 class="text-3xl font-black text-gray-600 mb-6 text-center">🅰 傳統觀念：還房貸</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 mt-1">
+                            1
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">現金歸零</h4>
+                            <p class="text-lg text-gray-600">500萬現金全部拿去還給銀行。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 mt-1">
+                            2
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">資產被鎖住</h4>
+                            <p class="text-lg text-gray-600">錢變成了房子（不動產），若急需用錢很難變現。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 mt-1">
+                            3
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">沒有現金流</h4>
+                            <p class="text-lg text-gray-600">房子還清了，但也無法產生利息收入。</p>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-200 my-4">
+
+                    <div class="bg-gray-100 p-6 rounded-xl text-center">
+                        <p class="text-lg text-gray-500 font-bold mb-2">30年後的結局</p>
+                        <p class="text-2xl font-bold text-gray-800">擁有一間房子</p>
+                        <p class="text-4xl font-black text-gray-400 mt-2">現金 $0</p>
+                        <p class="text-sm text-red-500 mt-2 font-bold">⚠️ 身故時，家人只拿到房子</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 card-shadow border border-yellow-200 relative overflow-hidden transform md:-translate-y-4 transition-transform duration-300">
+                <div class="absolute top-0 left-0 w-full h-2 bg-brand-gold"></div>
+                <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">推薦方案</div>
+                <h3 class="text-3xl font-black text-brand-blue mb-6 text-center">🅱 活化策略：存房貸</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-brand-gold mt-1">
+                            1
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">現金轉入分紅保單</h4>
+                            <p class="text-lg text-gray-600">500萬分三年投入，持有高價值資產。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-brand-gold mt-1">
+                            2
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">系統自動繳房貸</h4>
+                            <p class="text-lg text-gray-600">第10年起，每年領 <span class="text-red-600 font-black">28萬</span>，完全覆蓋房貸支出。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-brand-gold mt-1">
+                            3
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold text-gray-800">現金流持續一輩子</h4>
+                            <p class="text-lg text-gray-600">20年後房貸繳清了，這筆 28萬 繼續領，變成退休金！</p>
+                        </div>
+                    </div>
+
+                    <hr class="border-yellow-100 my-4">
+
+                    <div class="bg-yellow-50 p-6 rounded-xl text-center border border-yellow-200">
+                        <p class="text-lg text-brand-blue font-bold mb-2">30年後的結局</p>
+                        <p class="text-2xl font-bold text-gray-800">擁有一間房子 + 領不完的退休金</p>
+                        <p class="text-sm text-gray-500 mt-3 mb-1">80歲身故傳承</p>
+                        <p class="text-5xl font-black text-brand-gold mt-1">$500萬</p>
+                        <p class="text-sm text-green-600 mt-2 font-bold">✅ 家人拿到房子 + 500萬現金</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-brand-blue py-12 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">為什麼這個策略更聰明？</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-4">
+                    <i class="fas fa-shield-alt text-5xl text-brand-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">保全資產</h3>
+                    <p class="text-lg text-blue-100">現金不會被通膨吃掉，也不會卡在房子裡動彈不得。</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-hand-holding-usd text-5xl text-brand-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">被動收入</h3>
+                    <p class="text-lg text-blue-100">房貸繳清後，原本拿去繳房貸的錢直接轉為您的養老金。</p>
+                </div>
+                <div class="p-4">
+                    <i class="fas fa-users text-5xl text-brand-gold mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">愛留家人</h3>
+                    <p class="text-lg text-blue-100">透過身故理賠機制，將500萬完整傳承給最愛的人。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark py-8 text-center text-gray-400">
+        <div class="container mx-auto px-4">
+            <p class="text-lg mb-2">想了解如何為您的資產創造雙倍價值？</p>
+            <p class="text-sm opacity-70">註：本試算僅供參考，實際分紅與理賠金額以保單條款及當時宣告利率為準。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
